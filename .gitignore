@@ -1,0 +1,20 @@
+node_modules/
+.DS_Store
+*.log
+npm-debug.log*
+.env
+.env.local
+test-results/
+playwright-report/
+
+# Generated test/coverage artifacts - regenerate on every test run
+coverage/
+.nyc_output/
+cucumber-report.html
+
+# Runtime leaderboard data - recreated automatically as empty if missing
+data/leaderboards/*.json
+
+# Local Claude Code tool config (permission allowlist etc.) - machine-specific,
+# not project source. .claude/launch.json is still tracked (dev-server config).
+.claude/settings.local.json

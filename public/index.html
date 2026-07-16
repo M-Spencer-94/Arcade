@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Arcade</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hub.css">
+</head>
+<body>
+  <div id="hub-container">
+    <h1>VIRTUAL ARCADE</h1>
+    <p class="hub-subtitle">Three classics. Three leaderboards. Zero quarters required.</p>
+
+    <div class="game-grid">
+      <div class="game-card">
+        <h2>Tetris</h2>
+        <p>Stack falling blocks, clear lines, and don't let the pile reach the top.</p>
+        <div class="card-actions">
+          <a class="play-link" href="/tetris">Play</a>
+          <button class="leaderboard-btn" data-game="tetris">🏆 Scores</button>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <h2>Pac-Man</h2>
+        <p>Chomp every dot in the maze while dodging four hungry ghosts.</p>
+        <div class="card-actions">
+          <a class="play-link" href="/pacman">Play</a>
+          <button class="leaderboard-btn" data-game="pacman">🏆 Scores</button>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <h2>Space Invaders</h2>
+        <p>Hold the line against a descending alien formation before they land.</p>
+        <div class="card-actions">
+          <a class="play-link" href="/space-invaders">Play</a>
+          <button class="leaderboard-btn" data-game="space-invaders">🏆 Scores</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="leaderboard-overlay" class="overlay hidden"></div>
+  </div>
+
+  <script src="js/shared/leaderboard-client.js"></script>
+  <script src="js/shared/leaderboard-ui.js"></script>
+  <script src="js/hub.js"></script>
+</body>
+</html>

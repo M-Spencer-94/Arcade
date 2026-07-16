@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris - Virtual Arcade</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="game-wrapper">
+      <canvas id="game-canvas" width="200" height="400"></canvas>
+    </div>
+    <div id="ui-panel">
+      <div class="info-section">
+        <h1>TETRIS</h1>
+        <a class="hub-link" href="/">&larr; Arcade</a>
+      </div>
+      <div class="info-section">
+        <div class="info-row">
+          <span class="label">Score:</span>
+          <span id="score" class="value">0</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Level:</span>
+          <span id="level" class="value">1</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Lines:</span>
+          <span id="lines" class="value">0</span>
+        </div>
+      </div>
+      <div class="info-section">
+        <h2>Next Piece</h2>
+        <canvas id="next-preview" width="80" height="80"></canvas>
+      </div>
+      <div class="info-section controls">
+        <button id="pause-btn">Pause</button>
+        <button id="mute-btn">🔊 Mute</button>
+        <button id="leaderboard-btn">🏆 Scores</button>
+      </div>
+      <div class="info-section instructions">
+        <h3>Controls</h3>
+        <p>← → Move</p>
+        <p>↓ Soft Drop</p>
+        <p>Space Hard Drop</p>
+        <p>Enter Pause</p>
+      </div>
+      <div id="game-over-overlay" class="overlay hidden">
+        <div class="overlay-content">
+          <h2>GAME OVER</h2>
+          <p id="final-score">Score: 0</p>
+          <button id="restart-btn">Restart Game</button>
+        </div>
+      </div>
+      <div id="name-entry-overlay" class="overlay hidden"></div>
+      <div id="leaderboard-overlay" class="overlay hidden"></div>
+    </div>
+  </div>
+
+  <script src="js/shared/canvas-utils.js"></script>
+  <script src="js/shared/synth.js"></script>
+  <script src="js/shared/leaderboard-client.js"></script>
+  <script src="js/shared/leaderboard-ui.js"></script>
+  <script src="js/tetris/game-engine.js"></script>
+  <script src="js/tetris/renderer.js"></script>
+  <script src="js/tetris/audio-manager.js"></script>
+  <script src="js/tetris/main.js"></script>
+</body>
+</html>

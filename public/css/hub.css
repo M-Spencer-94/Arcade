@@ -1,0 +1,78 @@
+#hub-container {
+  max-width: 900px;
+  width: 100%;
+  padding: 30px;
+}
+
+#hub-container h1 {
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 4px;
+  color: #00d4ff;
+  margin-bottom: 8px;
+}
+
+.hub-subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.game-card {
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid #00d4ff;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.game-card h2 {
+  color: #00d4ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.game-card p {
+  color: #ccc;
+  font-size: 13px;
+  flex-grow: 1;
+}
+
+.game-card .card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.game-card .play-link {
+  flex: 1;
+  display: block;
+  padding: 12px;
+  background: #00d4ff;
+  color: #000;
+  font-weight: 700;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+}
+
+.game-card .play-link:hover {
+  background: #00ffff;
+}
+
+@media (max-width: 768px) {
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+}

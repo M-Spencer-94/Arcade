@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pac-Man - Virtual Arcade</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="game-wrapper">
+      <canvas id="game-canvas" width="300" height="300"></canvas>
+    </div>
+    <div id="ui-panel">
+      <div class="info-section">
+        <h1>PAC-MAN</h1>
+        <a class="hub-link" href="/">&larr; Arcade</a>
+      </div>
+      <div class="info-section">
+        <div class="info-row">
+          <span class="label">Score:</span>
+          <span id="score" class="value">0</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Level:</span>
+          <span id="level" class="value">1</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Lives:</span>
+          <span id="lives" class="value">3</span>
+        </div>
+      </div>
+      <div class="info-section controls">
+        <button id="pause-btn">Pause</button>
+        <button id="mute-btn">🔊 Mute</button>
+        <button id="leaderboard-btn">🏆 Scores</button>
+      </div>
+      <div class="info-section instructions">
+        <h3>Controls</h3>
+        <p>Arrow Keys Move</p>
+        <p>Enter Pause</p>
+      </div>
+      <div id="game-over-overlay" class="overlay hidden">
+        <div class="overlay-content">
+          <h2>GAME OVER</h2>
+          <p id="final-score">Score: 0</p>
+          <button id="restart-btn">Restart Game</button>
+        </div>
+      </div>
+      <div id="name-entry-overlay" class="overlay hidden"></div>
+      <div id="leaderboard-overlay" class="overlay hidden"></div>
+    </div>
+  </div>
+
+  <script src="js/shared/canvas-utils.js"></script>
+  <script src="js/shared/synth.js"></script>
+  <script src="js/shared/leaderboard-client.js"></script>
+  <script src="js/shared/leaderboard-ui.js"></script>
+  <script src="js/pacman/game-engine.js"></script>
+  <script src="js/pacman/renderer.js"></script>
+  <script src="js/pacman/audio-manager.js"></script>
+  <script src="js/pacman/main.js"></script>
+</body>
+</html>

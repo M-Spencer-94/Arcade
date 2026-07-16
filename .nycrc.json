@@ -1,0 +1,35 @@
+{
+  "reporter": [
+    "text",
+    "html",
+    "lcov"
+  ],
+  "all": true,
+  "include": [
+    "public/js/tetris/game-engine.js",
+    "public/js/tetris/audio-manager.js",
+    "public/js/shared/synth.js",
+    "public/js/pacman/game-engine.js",
+    "public/js/pacman/audio-manager.js",
+    "public/js/space-invaders/game-engine.js",
+    "public/js/space-invaders/audio-manager.js",
+    "routes/leaderboard.js"
+  ],
+  "exclude": [
+    "public/js/*/main.js",
+    "public/js/*/renderer.js",
+    "public/js/shared/canvas-utils.js",
+    "public/js/shared/leaderboard-client.js",
+    "public/js/shared/leaderboard-ui.js",
+    "public/js/hub.js",
+    "features/**/*",
+    "node_modules/**/*"
+  ],
+  "statements": 100,
+  "branches": 100,
+  "functions": 100,
+  "lines": 100,
+  "check-coverage": true,
+  "report-dir": "./coverage",
+  "temp-dir": "./.nyc_output"
+}

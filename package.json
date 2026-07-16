@@ -1,0 +1,33 @@
+{
+  "name": "virtual-arcade",
+  "version": "1.0.0",
+  "description": "A browser-based virtual arcade: Tetris, Pac-Man, and Space Invaders, each with its own leaderboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "PATH=\"/opt/homebrew/opt/node@20/bin:$PATH\" node -r ./test-setup.js ./node_modules/.bin/cucumber-js",
+    "test:coverage": "PATH=\"/opt/homebrew/opt/node@20/bin:$PATH\" nyc node -r ./test-setup.js ./node_modules/.bin/cucumber-js",
+    "coverage:report": "open coverage/index.html",
+    "test:e2e": "PATH=\"/opt/homebrew/opt/node@20/bin:$PATH\" playwright test",
+    "test:e2e:update": "PATH=\"/opt/homebrew/opt/node@20/bin:$PATH\" playwright test --update-snapshots"
+  },
+  "keywords": [
+    "tetris",
+    "pacman",
+    "space-invaders",
+    "arcade",
+    "game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.4.0",
+    "@playwright/test": "^1.61.1",
+    "jsdom": "^20.0.3",
+    "nyc": "^15.1.0"
+  }
+}
